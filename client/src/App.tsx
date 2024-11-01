@@ -1,16 +1,14 @@
-import styled from 'styled-components'
-import './App.css'
-import { Button } from 'antd'
-
-const StyledButton = styled(Button)`
-  background-color: red;
-`
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Main from "./pages/Main"
 
 function App() {
-
   return (
     <>
-      <StyledButton type='text'>ddd</StyledButton>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Main/>} />
+        </Routes>
+      </BrowserRouter>     
     </>
   )
 }
