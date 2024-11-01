@@ -12,6 +12,9 @@ const StyledHeader = styled.header`
     font-size: 25px;
     font-weight: bold;
     box-shadow: grey 0px 1px;
+    position:sticky;
+    top:0;
+    background-color:white;
 `
 
 function Header() {

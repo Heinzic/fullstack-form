@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import { FunctionComponent } from "react";
 import styled from "styled-components";
 
 interface ButtonProps{
@@ -6,11 +7,12 @@ interface ButtonProps{
 }
 
 const GreyButton = styled(Button)`
-    background-color: grey;
-    padding: 10px 40px
+    background-color: rgb(86,86,86);
+    padding: 10px 40px;
+    color:white;
 `
 
-function StyledButton({children}: ButtonProps) {
+const StyledButton:FunctionComponent<ButtonProps> = ({children}) => {
     return (
         <GreyButton>
             {children}
