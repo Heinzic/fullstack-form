@@ -8,6 +8,7 @@ import Footer from "../components/shared/Footer";
 const VideoSectionContainer = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-around;
     padding: 30px 30px;
     gap:40px;
@@ -15,6 +16,9 @@ const VideoSectionContainer = styled.div`
 `
 const VideoInfo = styled.div`
     max-width:500px;
+`
+const VideoScreen = styled.div`
+    width:40%;
 `
 const CardSectionContainer = styled.div`
     display: flex;
@@ -89,9 +93,9 @@ function Main() {
                             <h1>Most important title on the page</h1>
                             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Aliquam mattis, leo et condimentum ultricies, sem urna convallis metus, vel suscipit nibh lacus tincidunt ante</span>
                         </VideoInfo>
-                        <div>
-                            <iframe width={600} height={315} src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
-                        </div>
+                        <VideoScreen>
+                            <iframe style={{width: "100%", height:"100%"}} src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+                        </VideoScreen>
                     </VideoSectionContainer>
                     <CardSectionContainer>
                         <Styledh2>Also very important title</Styledh2>

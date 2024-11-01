@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding:15px 50px;
+    padding:40px 50px;
     width:100%;
     font-size: 25px;
     font-weight: bold;
