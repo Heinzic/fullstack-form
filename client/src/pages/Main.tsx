@@ -3,6 +3,7 @@ import Header from "../components/shared/Header";
 import { Content } from "antd/es/layout/layout";
 import styled from "styled-components";
 import StyledButton from "../components/ui/StyledButton";
+import Footer from "../components/shared/Footer";
 
 const VideoSectionContainer = styled.div`
     display: flex;
@@ -30,8 +31,22 @@ const CardSectionContent = styled.div`
     flex-wrap: wrap;
     gap:10px;
 `
+const EmptySectionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 40px 30px;
+    gap:40px;
+    background-color:rgb(212,213,213);
+`
 const Styledh2 = styled.h2`
     font-size:3em;
+    margin-bottom:0px;
+`
+const Styledh3 = styled.h3`
+    font-size:2.7em;
     margin-bottom:0px;
 `
 
@@ -87,8 +102,12 @@ function Main() {
                         </CardSectionContent>
                         <StyledButton>Contact us</StyledButton>
                     </CardSectionContainer>
+                    <EmptySectionContainer>
+                        <Styledh3>Less important title</Styledh3>
+                        <StyledButton>Contact us</StyledButton>
+                    </EmptySectionContainer>
                 </Content>
-                
+                <Footer/>
             </Layout>
         </> 
     );
