@@ -22,7 +22,10 @@ const StyledHeader = styled.header`
 function Header() {
     return (
         <StyledHeader>
-            <span>Some Company</span>
+            <NavLink to={'/'}>
+                <span>Some Company</span>
+            </NavLink>
+            
             <NavLink to={'/form'}>
                 <StyledButton>Contact us</StyledButton>
             </NavLink>
