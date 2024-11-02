@@ -1,89 +1,39 @@
 import { Card, Layout } from "antd";
 import Header from "../components/shared/Header";
 import { Content } from "antd/es/layout/layout";
-import styled from "styled-components";
 import StyledButton from "../components/ui/StyledButton";
 import Footer from "../components/shared/Footer";
 import { NavLink } from "react-router-dom";
+import { VideoSectionContainer, VideoInfo, VideoScreen, CardSectionContainer, Styledh2, CardSectionContent, EmptySectionContainer, Styledh3 } from "../components/shared/styles";
 
-const VideoSectionContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    padding: 30px 30px;
-    gap:40px;
-    background-color:rgb(212,213,213);
-`
-const VideoInfo = styled.div`
-    max-width:500px;
-`
-const VideoScreen = styled.div`
-    width:40%;
-`
-const CardSectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    padding: 0px 30px;
-    gap:40px;
-`
-const CardSectionContent = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:10px;
-`
-const EmptySectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    padding: 40px 30px;
-    gap:40px;
-    background-color:rgb(212,213,213);
-`
-const Styledh2 = styled.h2`
-    font-size:3em;
-    margin-bottom:0px;
-`
-const Styledh3 = styled.h3`
-    font-size:2.7em;
-    margin-bottom:0px;
-`
+const CARD_CONTENT = [
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+    {
+        title:"Title",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
+    },
+]
 
 function Main() {
-
-    const cardContent = [
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-        {
-            title:"Title",
-            content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis, leo et condimentum"
-        },
-    ]
-
     return ( 
         <>
             <Layout>
@@ -101,7 +51,7 @@ function Main() {
                     <CardSectionContainer>
                         <Styledh2>Also very important title</Styledh2>
                         <CardSectionContent>
-                            {cardContent.map((card, index) => (
+                            {CARD_CONTENT.map((card, index) => (
                                 <Card title={card.title} key={index} style={{ width: 400}}>{card.content}</Card>
                             ))}
                         </CardSectionContent>
