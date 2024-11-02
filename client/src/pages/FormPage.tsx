@@ -5,6 +5,7 @@ import { Form, FormProps, Input } from "antd";
 import StyledButton from "../components/ui/StyledButton";
 import TextArea from "antd/es/input/TextArea";
 import styled from "styled-components";
+import axios from "axios";
 
 interface IFormFields {
     name:string
@@ -12,7 +13,8 @@ interface IFormFields {
     message: string
 };
   
-const onFinish: FormProps<IFormFields>['onFinish'] = (values) => {
+const onFinish: FormProps<IFormFields>['onFinish'] = async (values) => {    
+    await axios.post("http://localhost:3000", values)
     console.log('Success:', values);
 };
   
