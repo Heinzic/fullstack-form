@@ -95,7 +95,7 @@ function Main() {
                             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Aliquam mattis, leo et condimentum ultricies, sem urna convallis metus, vel suscipit nibh lacus tincidunt ante</span>
                         </VideoInfo>
                         <VideoScreen>
-                            <iframe style={{width: "100%", height:"100%"}} src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+                            <iframe style={{width: "100%", height:"100%"}} src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=GGNX5KtCFOBwGbVp"/>
                         </VideoScreen>
                     </VideoSectionContainer>
                     <CardSectionContainer>
