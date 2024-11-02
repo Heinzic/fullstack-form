@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Fullstack form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple fullstack web app, which sends data from 'contact us' form to backend.
+You can see deployed app at https://ryzhenko-fullstack-form.onrender.com/
 
-Currently, two official plugins are available:
+## Dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Frontend: React, typescript, styled-components, antd, axios
+* Backend: Express, nodemon, typescript
 
-## Expanding the ESLint configuration
+## Installing
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+* Clone repository:
 ```
+git clone https://github.com/Heinzic/fullstack-form.git
+cd fullstack-form
+``` 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Executing program
+
+* Run client
+```
+cd .\client\
+npm i
+npm run dev
+```
+dont forget to change url for axios in FormPage 
+
+* Run server
+```
+cd ..
+cd .\server\
+npm i
+npm run dev
+```
