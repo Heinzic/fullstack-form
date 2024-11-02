@@ -35,7 +35,7 @@ function FormPage() {
     const [dataDelivered, setDataDelivered] = useState(false)
 
     const onFinish: FormProps<IFormFields>['onFinish'] = async (values) => {    
-        await axios.post("http://localhost:3000", values)
+        await axios.post("https://ryzhenkofullstack-form-backend.onrender.com", values)
         setDataDelivered((dataDelivered) => !dataDelivered)
         console.log('Success:', values);
     };
