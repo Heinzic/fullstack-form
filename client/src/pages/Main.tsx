@@ -4,6 +4,7 @@ import { Content } from "antd/es/layout/layout";
 import styled from "styled-components";
 import StyledButton from "../components/ui/StyledButton";
 import Footer from "../components/shared/Footer";
+import { NavLink } from "react-router-dom";
 
 const VideoSectionContainer = styled.div`
     display: flex;
@@ -104,11 +105,16 @@ function Main() {
                                 <Card title={card.title} key={index} style={{ width: 400}}>{card.content}</Card>
                             ))}
                         </CardSectionContent>
-                        <StyledButton>Contact us</StyledButton>
+                        <NavLink to={'/form'}>
+                            <StyledButton>Contact us</StyledButton>
+                        </NavLink>
+                        
                     </CardSectionContainer>
                     <EmptySectionContainer>
                         <Styledh3>Less important title</Styledh3>
-                        <StyledButton>Contact us</StyledButton>
+                        <NavLink to={'/form'}>
+                            <StyledButton>Contact us</StyledButton>
+                        </NavLink>
                     </EmptySectionContainer>
                 </Content>
                 <Footer/>

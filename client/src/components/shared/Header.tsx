@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import StyledButton from "../ui/StyledButton";
+import { NavLink } from "react-router-dom";
 
 const StyledHeader = styled.header`
     display:flex;
@@ -22,7 +23,9 @@ function Header() {
     return (
         <StyledHeader>
             <span>Some Company</span>
-            <StyledButton>Contact us</StyledButton>
+            <NavLink to={'/form'}>
+                <StyledButton>Contact us</StyledButton>
+            </NavLink>
         </StyledHeader>
     );
 }

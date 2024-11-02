@@ -3,7 +3,8 @@ import { FunctionComponent } from "react";
 import styled from "styled-components";
 
 interface ButtonProps{
-    children: string
+    children: string,
+    htmlType?: "button" | "reset" | "submit"
 }
 
 const GreyButton = styled(Button)`
@@ -12,9 +13,9 @@ const GreyButton = styled(Button)`
     color:white;
 `
 
-const StyledButton:FunctionComponent<ButtonProps> = ({children}) => {
+const StyledButton:FunctionComponent<ButtonProps> = ({children, htmlType}) => {
     return (
-        <GreyButton>
+        <GreyButton htmlType={htmlType}>
             {children}
         </GreyButton>
     );

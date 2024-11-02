@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
     display:flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding:40px 50px;
+    padding:20px 50px;
     width:100%;
     font-size: 25px;
     font-weight: bold;
